@@ -41,3 +41,15 @@ Install nix
 ```bash
 sh <(curl -L https://nixos.org/nix/install) --daemon
 ```
+
+until I figure out how to make nix mount on startup, you need to run the following every time you boot up microos
+
+```bash
+sudo mount --bind /var/lib/nix /nix
+```
+
+and
+
+```bash
+sudo systemctl enable --now nix-daemon.socket
+```
