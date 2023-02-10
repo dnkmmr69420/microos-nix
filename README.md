@@ -35,3 +35,12 @@ Install nix
 ```bash
 sh <(curl -L https://nixos.org/nix/install) --daemon
 ```
+
+until I figure out how to permenatly disable selinux on microos, you will have to do the following on every boot
+
+```bash
+sudo setenforce permissive
+```
+```bash
+sudo systemctl enable --now nix-daemon.socket
+```
