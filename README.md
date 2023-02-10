@@ -35,3 +35,9 @@ mount /var/lib/nix on /nix
 ```bash
 sudo mount --bind /var/lib/nix /nix
 ```
+
+Install nix
+
+```bash
+sh <(curl -L https://nixos.org/nix/install) --daemon
+```
