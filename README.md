@@ -12,44 +12,24 @@ Create a /nix subvolume in the transactional-update shell
 ```bash
 mksubvolume /nix
 ```
+add this to the end of /etc/fstab
+
+```
+/var/lib/nix /nix none bind 0 0
+```
 
 exit the transactional-update shell
 
-```bash
-exit
-```
-
-reboot the system
+set selinux to permissive by edditing the config
 
 ```bash
-systemctl reboot
+sudo nano /etc/selinux/config
 ```
 
-make /var/lib/nix directory
-
-```bash
-sudo mkdir /var/lib/nix
-```
-mount /var/lib/nix on /nix
-
-```bash
-sudo mount --bind /var/lib/nix /nix
-```
+reboot
 
 Install nix
 
 ```bash
 sh <(curl -L https://nixos.org/nix/install) --daemon
-```
-
-until I figure out how to make nix mount on startup, you need to run the following every time you boot up microos
-
-```bash
-sudo mount --bind /var/lib/nix /nix
-```
-
-and
-
-```bash
-sudo systemctl enable --now nix-daemon.socket
 ```
