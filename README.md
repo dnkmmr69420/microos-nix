@@ -18,13 +18,10 @@ add this to the end of /etc/fstab
 /var/lib/nix /nix none bind 0 0
 ```
 
+edit /etc/selinux/config and set it to permissive
+
 exit the transactional-update shell
 
-set selinux to permissive by edditing the config
-
-```bash
-sudo nano /etc/selinux/config
-```
 
 reboot
 
