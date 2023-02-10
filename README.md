@@ -12,6 +12,13 @@ Create a /nix subvolume in the transactional-update shell
 ```bash
 mksubvolume /nix
 ```
+
+create /var/lib/nix
+
+```bash
+mkdir /lib/var/nix
+```
+
 add this to the end of /etc/fstab
 
 ```
