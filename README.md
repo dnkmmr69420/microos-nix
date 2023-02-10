@@ -24,3 +24,14 @@ reboot the system
 ```bash
 systemctl reboot
 ```
+
+make /var/lib/nix directory
+
+```bash
+sudo mkdir /var/lib/nix
+```
+mount /var/lib/nix on /nix
+
+```bash
+sudo mount --bind /var/lib/nix /nix
+```
