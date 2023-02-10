@@ -20,6 +20,11 @@ add this to the end of /etc/fstab
 
 edit /etc/selinux/config and set it to permissive
 
+
+```
+SELINUX=permissive
+```
+
 exit the transactional-update shell
 
 
