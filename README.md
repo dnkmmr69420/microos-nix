@@ -16,7 +16,7 @@ mksubvolume /nix
 create /var/lib/nix
 
 ```bash
-mkdir /lib/var/nix
+mkdir /var/lib/nix
 ```
 
 add this to the end of /etc/fstab
